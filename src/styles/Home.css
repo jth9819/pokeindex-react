@@ -1,0 +1,15 @@
+#content-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 88vh;
+  margin-top: 75px;
+}
+
+.home-card {
+  margin: 5px auto 0px auto;
+  float: none;
+}
+
+.card-button {
+  margin-right: 8px;
+}

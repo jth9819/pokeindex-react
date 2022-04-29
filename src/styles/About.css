@@ -1,0 +1,6 @@
+#content-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 88vh;
+  margin-top: 75px;
+}

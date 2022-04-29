@@ -1,0 +1,22 @@
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: #34383c;
+}
+
+#search-button,
+#browse-button {
+  background-color: white;
+  color: black;
+}
+
+#search-button:hover,
+#browse-button:hover {
+  background-color: lightgrey;
+}
+
+#search-button:active,
+#browse-button:active {
+  background-color: lightgrey;
+  color: black;
+}
