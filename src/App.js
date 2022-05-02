@@ -9,17 +9,17 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="outer-container">
-        <AppNavbar />
-        <div className="container">
-          {/* Applies a set width */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </div>
-        <Footer />
+      <AppNavbar />
+      {/* <div className="outer-container"> */}
+      <div className="container">
+        {/* Applies a set width */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </div>
+      <Footer />
+      {/* </div> */}
     </Router>
   );
 }
