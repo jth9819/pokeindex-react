@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import CharizardImage from "../assets/images/charizard-about.png";
+import BlastoiseImage from "../assets/images/blastoise-about.png";
+import VenusaurImage from "../assets/images/venusaur-about.png";
 
 function Home() {
   let navigate = useNavigate();
@@ -87,8 +89,8 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* Charizard Image */}
       <div class="images">
-        {/* Charizard Image */}
         <section class="container-about-image-one">
           <img src={CharizardImage} alt="Charizard" width="400px" />
           <cite>
@@ -136,6 +138,61 @@ function Home() {
           </ul>
         </div>
       </section>
+      {/* Blastoise Image */}
+      <div class="images">
+        <section class="container-about-image-two">
+          <img src={BlastoiseImage} alt="Blastoise" width="350px" />
+          <cite>
+            <a href="https://bulbapedia.bulbagarden.net/wiki/Blastoise_(Pok%C3%A9mon)">
+              Blastoise
+            </a>
+            &nbsp;from Bulapedia
+          </cite>
+        </section>
+      </div>
+      {/* Other Information Section */}
+      <section class="other-information">
+        <div class="container">
+          <h2 id="other-information">
+            Other Information That May Interest You
+          </h2>
+          <ul>
+            <li>
+              Why are&nbsp;
+              <a href="https://www.health.harvard.edu/blog/the-health-effects-of-too-much-gaming-2020122221645">
+                prolonged periods of gaming
+              </a>
+              &nbsp;bad for you?
+            </li>
+            <li>
+              What&nbsp;
+              <a href="https://www.geico.com/living/home/technology/9-reasons-to-give-video-games-a-try/">
+                benefits
+              </a>
+              &nbsp;does gaming have?
+            </li>
+            <li>
+              The&nbsp;
+              <a href="https://www.economist.com/prospero/2016/02/28/the-legacy-of-pokemon-for-millennials">
+                legacy
+              </a>
+              &nbsp;pokemon has left us.
+            </li>
+          </ul>
+        </div>
+      </section>
+      {/* Venusaur Image */}
+      <div class="images">
+        <section class="container-about-image-three">
+          <img src={VenusaurImage} alt="Bulbasaur" width="400px" />
+          <cite>
+            <a href="https://bulbapedia.bulbagarden.net/wiki/Venusaur_(Pok%C3%A9mon)">
+              Venusaur
+            </a>
+            &nbsp;from Bulapedia
+          </cite>
+        </section>
+      </div>
     </div>
   );
 }
