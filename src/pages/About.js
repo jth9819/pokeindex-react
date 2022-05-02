@@ -1,8 +1,6 @@
 import "../styles/About.css";
 import { useNavigate } from "react-router-dom";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import CharizardImage from "../assets/images/charizard-about.png";
 import BlastoiseImage from "../assets/images/blastoise-about.png";
 import VenusaurImage from "../assets/images/venusaur-about.png";
