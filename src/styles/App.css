@@ -27,6 +27,7 @@ code {
 
 .content {
   flex: 1;
+  padding-top: 3.875rem;
 }
 
 /* html,

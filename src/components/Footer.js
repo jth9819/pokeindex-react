@@ -7,9 +7,7 @@ const Footer = () => {
   let navigate = useNavigate();
 
   return (
-    <footer class="container">
-      <hr />
-      <br />
+    <footer class="container footer">
       <div class="row">
         {/* Icon/Info column */}
         <div class="col-12 col-md">
@@ -19,7 +17,7 @@ const Footer = () => {
           </small>
         </div>
         {/* Features Column */}
-        <div class="col-6 col-md">
+        <div class="col-12 col-md">
           <h5>Features</h5>
           <ul class="list-unstyled text-small">
             <li>
@@ -47,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
         {/* Resources Column */}
-        <div class="col-6 col-md">
+        <div class="col-12 col-md">
           <h5>Resources</h5>
           <ul class="list-unstyled text-small">
             <li>
@@ -64,7 +62,7 @@ const Footer = () => {
           </ul>
         </div>
         {/* About Column */}
-        <div class="col-6 col-md">
+        <div class="col-12 col-md">
           <h5>About</h5>
           <ul class="list-unstyled text-small">
             <li>

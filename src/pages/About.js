@@ -11,9 +11,9 @@ function Home() {
   let navigate = useNavigate();
 
   return (
-    <div id="content-wrap">
+    <div class="row" id="content-wrap">
       {/* Title */}
-      <div className="home-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <div className="home-header text-center">
         <h1 className="display-3">
           <strong>About PokéIndex</strong>
         </h1>

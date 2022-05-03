@@ -20,3 +20,17 @@
   background-color: lightgrey;
   color: black;
 }
+
+.navbar.sticky-nav {
+  justify-content: flex-start;
+}
+
+.navbar .navbar-brand {
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .navbar .navbar-brand {
+    margin-right: 1rem;
+  }
+}

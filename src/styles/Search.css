@@ -1,0 +1,30 @@
+#dream_sprite {
+  width: 270px;
+  height: 270px;
+}
+
+#default_sprite {
+  width: 230px;
+  height: 230px;
+}
+
+hr {
+  width: 58%;
+  display: block;
+  margin: auto;
+  flex-shrink: 0;
+}
+
+.home-header {
+  margin-top: 30px;
+}
+
+@media (min-width: 576px) {
+  .home-header {
+    margin-top: 50px;
+  }
+}
+
+/* .input-group {
+  flex: 1;
+} */
