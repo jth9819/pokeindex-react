@@ -14,10 +14,6 @@
   margin: auto;
 }
 
-.other-information {
-  flex: 1;
-}
-
 .other-information .container a {
   color: #4b6584;
 }
@@ -64,21 +60,21 @@
 }
 
 .images .container-about-image-one cite {
-  opacity: .7;
+  opacity: 0.7;
   display: block;
   text-align: center;
   margin: auto;
 }
 
 .images .container-about-image-two cite {
-  opacity: .7;
+  opacity: 0.7;
   display: block;
   text-align: center;
   margin: auto;
 }
 
 .images .container-about-image-three cite {
-  opacity: .7;
+  opacity: 0.7;
   display: block;
   text-align: center;
   margin: auto;
