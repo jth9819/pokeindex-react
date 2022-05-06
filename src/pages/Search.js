@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import PokemonCardSearch from "../components/PokemonCardSearch";
 
 import "../styles/Search.css";
 
 function Search() {
+  const [data, setData] = useState(null);
+  const [print, setPrint] = useState(false);
+
+  function getData(val) {
+    setData(val.target.value);
+    setPrint(false);
+    console.warn(val.target.value);
+  }
+
   return (
     <div class="row" id="content-wrap">
       {/* Title */}
@@ -22,6 +31,7 @@ function Search() {
         {/* Input field */}
         <input
           type="text"
+          onChange={getData}
           class="form-control rounded"
           id="search-query"
           placeholder="Search for a Pokemon!"
@@ -29,19 +39,16 @@ function Search() {
         />
         &nbsp;&nbsp;
         {/* Find button */}
-        <button class="input-group-text border-0" id="search-btn">
-          <i
-            class="fa fa-search"
-            alt="button"
-            value="search"
-            aria-hidden="true"
-            type="submit"
-          ></i>
-          &nbsp;Find
+        <button
+          onClick={() => setPrint(true)}
+          class="input-group-text border-0"
+          id="search-btn"
+        >
+          Find
         </button>
       </div>
-
-      <PokemonCardSearch pokemonProp="squirtle" />
+      {print ? <PokemonCardSearch pokemonProp={data} /> : null}
+      {/* <PokemonCardSearch pokemonProp={data} /> */}
     </div>
   );
 }
