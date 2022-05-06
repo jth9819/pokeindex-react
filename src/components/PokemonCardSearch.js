@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Card from "react-bootstrap/Card";
+
+import "../styles/PokemonCardSearch.css";
 
 function PokemonCardSearch(props) {
   const url = `https://pokeapi.co/api/v2/pokemon/${props.pokemonProp}`;
@@ -38,11 +41,11 @@ function PokemonCardSearch(props) {
     }
 
     let returnObject = (
-      <div>
-        <h1>{pokemonObject.name}</h1>;
-        <img src={pokemonObject.image} alt="Pokemon" />
-        <p>{pokemonTypes}</p>
-      </div>
+      <Card className="search-card">
+        <h2 id="pokemon-name">{pokemonObject.name}</h2>
+        <img id="pokemon-image" src={pokemonObject.image} alt="Pokemon" />
+        <p id="pokemon-types">{pokemonTypes}</p>
+      </Card>
     );
 
     return <div>{returnObject}</div>;

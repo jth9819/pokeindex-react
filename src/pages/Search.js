@@ -10,7 +10,6 @@ function Search() {
   function getData(val) {
     setData(val.target.value);
     setPrint(false);
-    console.warn(val.target.value);
   }
 
   return (
@@ -48,7 +47,6 @@ function Search() {
         </button>
       </div>
       {print ? <PokemonCardSearch pokemonProp={data} /> : null}
-      {/* <PokemonCardSearch pokemonProp={data} /> */}
     </div>
   );
 }

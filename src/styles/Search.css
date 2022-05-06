@@ -17,6 +17,8 @@ hr {
 
 .home-header {
   margin-top: 30px;
+  margin-bottom: 30px;
+
 }
 
 @media (min-width: 576px) {
@@ -25,6 +27,12 @@ hr {
   }
 }
 
-/* .input-group {
-  flex: 1;
-} */
+.input-group {
+  width: auto
+}
+
+@media (min-width: 576px) {
+  .input-group {
+    width: 32rem;
+  }
+}
