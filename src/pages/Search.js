@@ -5,55 +5,53 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Search() {
-  let examplePokemon = "charizard";
+  let examplePokemon = "charizard"; // TODO: Temporary variable
   const url = `https://pokeapi.co/api/v2/pokemon/${examplePokemon}`;
   const [pokemon, setPokemon] = useState(null);
 
+  // Declare object to store the pokemon info
   let pokemonObject = {
     name: null,
     image: null,
     types: [],
   };
 
+  // Call API and get info
   useEffect(() => {
     axios.get(url).then((response) => {
       setPokemon(response.data);
     });
   }, [url]);
 
+  // If information is retrieved, store and return.
   if (pokemon) {
+    let pokemonTypes = null;
+
     pokemonObject = {
       name: pokemon.name,
       image: pokemon.sprites.other.dream_world.front_default,
       types: pokemon.types,
     };
 
-    console.log(pokemonObject.types[0].type.name);
+    // Check and store types
+    if (pokemon.types.length === 1) {
+      pokemonTypes = pokemonObject.types[0].type.name;
+    }
+    if (pokemon.types.length === 2) {
+      pokemonTypes =
+        pokemonObject.types[0].type.name +
+        " / " +
+        pokemonObject.types[1].type.name;
+    }
 
     return (
       <div>
         <h1>{pokemonObject.name}</h1>;
         <img src={pokemonObject.image} alt="Pokemon" />
-        <p>{pokemonObject.types[0].type.name}</p>
+        <p>{pokemonTypes}</p>
       </div>
     );
   }
-
-  //   console.log(pokemonObject.types[0].type.name);
-
-  // pokemonObject.image = (
-  //   <img src={pokemon.sprites.other.dream_world.front_default} />
-  // );
-
-  // content = (
-  //   <div>
-  //     <h1>{pokemon.name}</h1>
-  //   </div>
-  // );
-
-  // content = {
-  //   name: product.name,
-  // image: product.sprites.other.dream_world.front_default
 
   return (
     <div>
