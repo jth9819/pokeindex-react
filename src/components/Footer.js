@@ -7,81 +7,77 @@ const Footer = () => {
   let navigate = useNavigate();
 
   return (
-    <footer class="container footer">
-      <div class="row">
+    <footer className="container footer">
+      <div className="row">
         {/* Icon/Info column */}
-        <div class="col-12 col-md">
+        <div className="col-12 col-md">
           <img src={MainLogo} alt="Pokeball Icon" width="30px" height="30px" />
           <a
             href="https://github.com/jth9819"
             target="_blank"
             rel="noreferrer"
-            class="text-muted"
+            className="text-muted"
           >
-            <small class="d-block mb-3 text-muted">
+            <small className="d-block mb-3 text-muted">
               &copy; 2022 Justin Harrison
             </small>
           </a>
         </div>
         {/* Features Column */}
-        <div class="col-12 col-md">
+        <div className="col-12 col-md">
           <h5>Features</h5>
-          <ul class="list-unstyled text-small">
+          <ul className="list-unstyled text-small">
             <li>
-              <a
-                href
-                class="text-muted"
+              <button
+                className="text-muted"
                 onClick={() => {
                   navigate("/search", { replace: true });
                 }}
               >
                 Search for Pokemon
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href
-                class="text-muted"
+              <button
+                className="text-muted"
                 onClick={() => {
                   navigate("/browse", { replace: true });
                 }}
               >
                 Browse Pokemon
-              </a>
+              </button>
             </li>
           </ul>
         </div>
         {/* Resources Column */}
-        <div class="col-12 col-md">
+        <div className="col-12 col-md">
           <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
+          <ul className="list-unstyled text-small">
             <li>
-              <a
-                href
-                class="text-muted"
+              <button
+                className="text-muted"
                 onClick={() => {
                   navigate("/about", { replace: true });
                 }}
               >
                 Resources
-              </a>
+              </button>
             </li>
           </ul>
         </div>
         {/* About Column */}
-        <div class="col-12 col-md">
+        <div className="col-12 col-md">
           <h5>About</h5>
-          <ul class="list-unstyled text-small">
+          <ul className="list-unstyled text-small">
             <li>
-              <a
-                href
-                class="text-muted"
+              <button
+                className="text-muted"
                 onClick={() => {
                   navigate("/about", { replace: true });
                 }}
               >
                 About
-              </a>
+              </button>
             </li>
           </ul>
         </div>

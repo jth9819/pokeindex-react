@@ -11,7 +11,7 @@ import { Container } from "react-bootstrap";
 const AppNavbar = () => {
   return (
     <Navbar
-      colapseOnSelect
+      collapseOnSelect
       className="sticky-nav"
       fixed="top"
       expand="sm"

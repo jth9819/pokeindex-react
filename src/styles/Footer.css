@@ -33,3 +33,8 @@ footer img {
 .footer .row {
   text-align: center;
 }
+
+button {
+  border-style: none;
+  background-color: white;
+}

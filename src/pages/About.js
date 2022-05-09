@@ -11,8 +11,8 @@ function Home() {
   let navigate = useNavigate();
 
   return (
-    <div class="row" id="content-wrap">
-      {/* Title */}
+    <div className="row" id="content-wrap">
+      {/* Heading */}
       <div className="home-header text-center">
         <h1 className="display-3">
           <strong>About PokéIndex</strong>
@@ -20,10 +20,10 @@ function Home() {
         <p className="lead">A Beta Pokédex</p>
       </div>
       {/* Welcome, Why, How Section */}
-      <section class="welcome-why-how">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
+      <section className="welcome-why-how">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
               <h2>Welcome!</h2>
               <p>
                 Welcome to PokeIndex! We are a service that helps you explore
@@ -35,7 +35,7 @@ function Home() {
               {
                 <p>
                   <button
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     onClick={() => {
                       navigate("/", { replace: true });
                     }}
@@ -45,7 +45,7 @@ function Home() {
                 </p>
               }
             </div>
-            <div class="col-md-4">
+            <div className="col-md-4">
               <h2>Why</h2>
               <p>
                 Pokemon has been around for twenty five years and it is still
@@ -58,7 +58,7 @@ function Home() {
               </p>
               <p>
                 <a
-                  class="btn btn-secondary"
+                  className="btn btn-secondary"
                   href="https://itnext.io/my-minimalist-approach-to-software-engineering-5bc743ecb295"
                   target="_blank"
                   rel="noreferrer"
@@ -67,7 +67,7 @@ function Home() {
                 </a>
               </p>
             </div>
-            <div class="col-md-4">
+            <div className="col-md-4">
               <h2>How</h2>
               <p>
                 To go into more detail of how PokeIndex works, it's important to
@@ -79,7 +79,7 @@ function Home() {
               </p>
               <p>
                 <button
-                  class="btn btn-secondary"
+                  className="btn btn-secondary"
                   onClick={() => {
                     navigate("/search", { replace: true });
                   }}
@@ -92,8 +92,8 @@ function Home() {
         </div>
       </section>
       {/* Charizard Image */}
-      <div class="images">
-        <section class="container-about-image-one">
+      <div className="images">
+        <section className="container-about-image-one">
           <img src={CharizardImage} alt="Charizard" />
           <cite>
             <a
@@ -108,8 +108,8 @@ function Home() {
         </section>
       </div>
       {/* Potential Applications Section */}
-      <section class="potential-applications">
-        <div class="container">
+      <section className="potential-applications">
+        <div className="container">
           <h2 id="potential-applications">Potential Applications</h2>
           <p>
             I would now like to discuss some potential web applications that can
@@ -145,8 +145,8 @@ function Home() {
         </div>
       </section>
       {/* Blastoise Image */}
-      <div class="images">
-        <section class="container-about-image-two">
+      <div className="images">
+        <section className="container-about-image-two">
           <img src={BlastoiseImage} alt="Blastoise" width="350px" />
           <cite>
             <a
@@ -161,8 +161,8 @@ function Home() {
         </section>
       </div>
       {/* Other Information Section */}
-      <section class="other-information">
-        <div class="container">
+      <section className="other-information">
+        <div className="container">
           <h2 id="other-information">
             Other Information That May Interest You
           </h2>
@@ -204,8 +204,8 @@ function Home() {
         </div>
       </section>
       {/* Venusaur Image */}
-      <div class="images">
-        <section class="container-about-image-three">
+      <div className="images">
+        <section className="container-about-image-three">
           <img src={VenusaurImage} alt="Bulbasaur" width="400px" />
           <cite>
             <a
