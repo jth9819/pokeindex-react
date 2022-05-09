@@ -50,7 +50,7 @@ function PokemonCardSearch(props) {
 
     return <div>{returnObject}</div>;
   } else {
-    return <div>Nothing Returned.</div>;
+    return <div></div>;
   }
 }
 

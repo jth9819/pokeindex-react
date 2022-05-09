@@ -62,11 +62,36 @@
 }
 
 .images {
+  width: auto;
+  margin: auto;
+}
+
+.images img {
+  width: 16rem;
   margin: auto;
 }
 
 .images a {
   color: #4b6584;
+}
+
+@media (min-width: 576px) {
+  .images img {
+    width: 22rem;
+    margin: auto;
+  }}
+
+.container-about-image-one img {
+  margin-top: 1rem;;
+}
+
+.container-about-image-two img {
+  margin-top: 4rem;
+  margin-bottom: 2rem;;
+}
+
+.container-about-image-three img {
+  margin-top: 3rem;
 }
 
 .images .container-about-image-one cite {

@@ -92,7 +92,7 @@ function Home() {
       {/* Charizard Image */}
       <div class="images">
         <section class="container-about-image-one">
-          <img src={CharizardImage} alt="Charizard" width="400px" />
+          <img src={CharizardImage} alt="Charizard" />
           <cite>
             <a href="https://bulbapedia.bulbagarden.net/wiki/Charizard_(Pok%C3%A9mon)">
               Charizard
