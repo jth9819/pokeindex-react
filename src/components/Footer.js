@@ -12,9 +12,16 @@ const Footer = () => {
         {/* Icon/Info column */}
         <div class="col-12 col-md">
           <img src={MainLogo} alt="Pokeball Icon" width="30px" height="30px" />
-          <small class="d-block mb-3 text-muted">
-            &copy; 2022 Justin Harrison
-          </small>
+          <a
+            href="https://github.com/jth9819"
+            target="_blank"
+            rel="noreferrer"
+            class="text-muted"
+          >
+            <small class="d-block mb-3 text-muted">
+              &copy; 2022 Justin Harrison
+            </small>
+          </a>
         </div>
         {/* Features Column */}
         <div class="col-12 col-md">
