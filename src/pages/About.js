@@ -60,6 +60,8 @@ function Home() {
                 <a
                   class="btn btn-secondary"
                   href="https://itnext.io/my-minimalist-approach-to-software-engineering-5bc743ecb295"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Learn More &raquo;
                 </a>
@@ -94,7 +96,11 @@ function Home() {
         <section class="container-about-image-one">
           <img src={CharizardImage} alt="Charizard" />
           <cite>
-            <a href="https://bulbapedia.bulbagarden.net/wiki/Charizard_(Pok%C3%A9mon)">
+            <a
+              href="https://bulbapedia.bulbagarden.net/wiki/Charizard_(Pok%C3%A9mon)"
+              target="_blank"
+              rel="noreferrer"
+            >
               Charizard
             </a>
             &nbsp;from Bulapedia
@@ -143,7 +149,11 @@ function Home() {
         <section class="container-about-image-two">
           <img src={BlastoiseImage} alt="Blastoise" width="350px" />
           <cite>
-            <a href="https://bulbapedia.bulbagarden.net/wiki/Blastoise_(Pok%C3%A9mon)">
+            <a
+              href="https://bulbapedia.bulbagarden.net/wiki/Blastoise_(Pok%C3%A9mon)"
+              target="_blank"
+              rel="noreferrer"
+            >
               Blastoise
             </a>
             &nbsp;from Bulapedia
@@ -159,21 +169,33 @@ function Home() {
           <ul>
             <li>
               Why are&nbsp;
-              <a href="https://www.health.harvard.edu/blog/the-health-effects-of-too-much-gaming-2020122221645">
+              <a
+                href="https://www.health.harvard.edu/blog/the-health-effects-of-too-much-gaming-2020122221645"
+                target="_blank"
+                rel="noreferrer"
+              >
                 prolonged periods of gaming
               </a>
               &nbsp;bad for you?
             </li>
             <li>
               What&nbsp;
-              <a href="https://www.geico.com/living/home/technology/9-reasons-to-give-video-games-a-try/">
+              <a
+                href="https://www.geico.com/living/home/technology/9-reasons-to-give-video-games-a-try/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 benefits
               </a>
               &nbsp;does gaming have?
             </li>
             <li>
               The&nbsp;
-              <a href="https://www.economist.com/prospero/2016/02/28/the-legacy-of-pokemon-for-millennials">
+              <a
+                href="https://www.economist.com/prospero/2016/02/28/the-legacy-of-pokemon-for-millennials"
+                target="_blank"
+                rel="noreferrer"
+              >
                 legacy
               </a>
               &nbsp;pokemon has left us.
@@ -186,7 +208,11 @@ function Home() {
         <section class="container-about-image-three">
           <img src={VenusaurImage} alt="Bulbasaur" width="400px" />
           <cite>
-            <a href="https://bulbapedia.bulbagarden.net/wiki/Venusaur_(Pok%C3%A9mon)">
+            <a
+              href="https://bulbapedia.bulbagarden.net/wiki/Venusaur_(Pok%C3%A9mon)"
+              target="_blank"
+              rel="noreferrer"
+            >
               Venusaur
             </a>
             &nbsp;from Bulapedia
