@@ -1,3 +1,4 @@
+import "../styles/PokemonCardBrowse.css";
 import React from "react";
 
 const PokemonCardBrowse = ({ id, image, name, type, _callback }) => {

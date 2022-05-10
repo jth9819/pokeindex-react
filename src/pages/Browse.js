@@ -5,7 +5,7 @@ import "../styles/Browse.css";
 const Browse = () => {
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
-    "https://pokeapi.co/api/v2/pokemon?limit=3"
+    "https://pokeapi.co/api/v2/pokemon?limit=14"
   );
 
   const getAllPokemons = async () => {
@@ -32,10 +32,19 @@ const Browse = () => {
   }, []);
 
   return (
-    <div className="app-contaner">
-      <h1>Pokemon Evolution</h1>
-      <div className="pokemon-container">
-        <div className="all-container">
+    <>
+      {/* Header */}
+      <div className="home-header text-center">
+        {/* Heading */}
+        <h1 className="display-3">
+          <strong>PokéIndex Browse</strong>
+        </h1>
+        {/* Subheading */}
+        <small>Browse for all Pokémon in the PokéAPI's database!</small>
+      </div>
+      {/* List */}
+      <div className="main-browse-container">
+        <div className="list-container">
           {allPokemons.map((pokemonStats, index) => (
             <PokemonCardBrowse
               key={index}
@@ -46,11 +55,11 @@ const Browse = () => {
             />
           ))}
         </div>
-        <button className="load-more" onClick={() => getAllPokemons()}>
+        <button id="load-more-button" onClick={() => getAllPokemons()}>
           Load more
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
