@@ -1,4 +1,4 @@
-import "../styles/Home.css";
+import "../styles/pages/Home.css";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { LinkContainer } from "react-router-bootstrap";

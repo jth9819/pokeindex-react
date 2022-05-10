@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PokemonCardBrowse from "../components/PokemonCardBrowse";
-import "../styles/Browse.css";
+import "../styles/pages/Browse.css";
 
 const Browse = () => {
   const [allPokemons, setAllPokemons] = useState([]);

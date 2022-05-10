@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
 
-import "../styles/PokemonCardSearch.css";
+import "../styles/components/PokemonCardSearch.css";
 
 function PokemonCardSearch(props) {
   const url = `https://pokeapi.co/api/v2/pokemon/${props.pokemonProp}`;

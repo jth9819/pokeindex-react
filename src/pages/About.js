@@ -1,4 +1,4 @@
-import "../styles/About.css";
+import "../styles/pages/About.css";
 import { useNavigate } from "react-router-dom";
 
 import CharizardImage from "../assets/images/charizard-about.png";

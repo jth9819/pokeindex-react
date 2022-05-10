@@ -1,4 +1,4 @@
-import "../styles/Footer.css";
+import "../styles/components/Footer.css";
 import { useNavigate } from "react-router-dom";
 
 import MainLogo from "../assets/images/favicon.ico";

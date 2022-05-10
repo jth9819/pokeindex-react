@@ -1,8 +1,8 @@
-import "../styles/PokemonCardBrowse.css";
+import "../styles/components/PokemonCardBrowse.css";
 import React from "react";
 
 const PokemonCardBrowse = ({ id, image, name, type, _callback }) => {
-  const style = type + " thumb-container";
+  const style = type + " card-container";
   return (
     <div className={style}>
       <div className="number">

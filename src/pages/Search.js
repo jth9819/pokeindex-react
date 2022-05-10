@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PokemonCardSearch from "../components/PokemonCardSearch";
 
-import "../styles/Search.css";
+import "../styles/pages/Search.css";
 
 function Search() {
   const [data, setData] = useState(null);
