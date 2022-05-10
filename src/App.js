@@ -14,7 +14,6 @@ function App() {
       <AppNavbar />
       <div className="content">
         <div className="container">
-          {" "}
           {/* Applies a set width */}
           <Routes>
             <Route path="/" element={<Home />} />

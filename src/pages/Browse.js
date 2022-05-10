@@ -1,12 +1,11 @@
-import "../styles/Browse.css";
+import React, { useEffect, useState } from "react";
 import PokemonCardBrowse from "../components/PokemonCardBrowse";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import "../styles/Browse.css";
 
 const Browse = () => {
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
-    "https://pokeapi.co/api/v2/pokemon?limit=20"
+    "https://pokeapi.co/api/v2/pokemon?limit=3"
   );
 
   const getAllPokemons = async () => {
@@ -15,18 +14,17 @@ const Browse = () => {
 
     setLoadMore(data.next);
 
-    function createPokemonObject(result) {
-      result.forEach(async (pokemon) => {
+    function createPokemonObject(results) {
+      results.forEach(async (pokemon) => {
         const res = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
         );
         const data = await res.json();
-
         setAllPokemons((currentList) => [...currentList, data]);
+        await allPokemons.sort((a, b) => a.id - b.id);
       });
     }
     createPokemonObject(data.results);
-    await console.log(allPokemons);
   };
 
   useEffect(() => {
@@ -34,29 +32,25 @@ const Browse = () => {
   }, []);
 
   return (
-    <>
-      <div className="home-header text-center">
-        {/* Heading */}
-        <h1 className="display-3">
-          <strong>PokéIndex Browse</strong>
-        </h1>
-        {/* Subheading */}
-        <small>Browse for all Pokémon in PokéAPI's database!</small>
-      </div>
-      {/* List */}
-      <div className="app-container">
-        <h1>Pokemon Evolution</h1>
-
-        <div className="pokemon-container">
-          <div className="all-containers">
-            {allPokemons.map((pokemon) => (
-              <li>{pokemon.name}</li>
-            ))}
-          </div>
-          <button className="load-more">Load more</button>
+    <div className="app-contaner">
+      <h1>Pokemon Evolution</h1>
+      <div className="pokemon-container">
+        <div className="all-container">
+          {allPokemons.map((pokemonStats, index) => (
+            <PokemonCardBrowse
+              key={index}
+              id={pokemonStats.id}
+              image={pokemonStats.sprites.other.dream_world.front_default}
+              name={pokemonStats.name}
+              type={pokemonStats.types[0].type.name}
+            />
+          ))}
         </div>
+        <button className="load-more" onClick={() => getAllPokemons()}>
+          Load more
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 
