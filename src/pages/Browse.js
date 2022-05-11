@@ -1,34 +1,36 @@
 import React, { useEffect, useState } from "react";
 import PokemonCardBrowse from "../components/PokemonCardBrowse";
+
 import "../styles/pages/Browse.css";
 
 const Browse = () => {
-  const [allPokemons, setAllPokemons] = useState([]);
+  const [allPokemon, setAllPokemon] = useState([]);
   const [loadMore, setLoadMore] = useState(
     "https://pokeapi.co/api/v2/pokemon?limit=18"
   );
 
-  const getAllPokemons = async () => {
+  // Retrieve pokemon info and store
+  const getAllPokemon = async () => {
     const res = await fetch(loadMore);
     const data = await res.json();
 
     setLoadMore(data.next);
 
-    function createPokemonObject(results) {
+    const createPokemonObject = (results) => {
       results.forEach(async (pokemon) => {
         const res = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
         );
         const data = await res.json();
-        setAllPokemons((currentList) => [...currentList, data]);
-        await allPokemons.sort((a, b) => a.id - b.id);
+        setAllPokemon((currentList) => [...currentList, data]);
+        allPokemon.sort((a, b) => a.id - b.id);
       });
-    }
+    };
     createPokemonObject(data.results);
   };
 
   useEffect(() => {
-    getAllPokemons();
+    getAllPokemon();
   }, []);
 
   return (
@@ -42,10 +44,10 @@ const Browse = () => {
         {/* Subheading */}
         <small>Browse for all Pokémon in the PokéAPI's database!</small>
       </div>
-      {/* List */}
-      <div className="main-browse-container">
+      <div className="browse-container">
+        {/* List to display pokemon */}
         <div className="list-container">
-          {allPokemons.map((pokemonStats, index) => (
+          {allPokemon.map((pokemonStats, index) => (
             <PokemonCardBrowse
               key={index}
               id={pokemonStats.id}
@@ -55,7 +57,8 @@ const Browse = () => {
             />
           ))}
         </div>
-        <button id="load-more-button" onClick={() => getAllPokemons()}>
+        {/* Button to load more Pokemon */}
+        <button id="load-more-button" onClick={() => getAllPokemon()}>
           Load more
         </button>
       </div>

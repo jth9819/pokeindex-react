@@ -1,8 +1,5 @@
 #content-wrap {
-  /* display: flex; */
   flex-direction: column;
-  /* min-height: 60vh; */
-  /* margin-top: 75px; */
 }
 
 .home-header {
@@ -18,13 +15,9 @@
 .home-card {
   margin: 10px auto 70px auto;
   float: none;
+  max-width: 30rem;
 }
 
 .card-button {
   margin-right: 8px;
-}
-
-.card.home-card {
-  padding: 0;
-  max-width: 30rem;
 }

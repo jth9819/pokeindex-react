@@ -38,7 +38,7 @@
   background-color:#E0F1FD;
 }
 
-.main-browse-container {
+.browse-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,10 +50,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-h3 {
-  margin-bottom: 0.2rem;
 }
 
 #load-more-button {

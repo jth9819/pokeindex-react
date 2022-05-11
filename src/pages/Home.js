@@ -1,23 +1,24 @@
-import "../styles/pages/Home.css";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { LinkContainer } from "react-router-bootstrap";
 
+import "../styles/pages/Home.css";
 import CardImage from "../assets/images/pokemon-home.jpeg";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
-function Home() {
+const Home = () => {
   return (
     <div className="row" id="content-wrap">
-      {/* Heading */}
+      {/* Header */}
       <div className="home-header text-center">
+        {/* Heading */}
         <h1 className="display-3">
           <strong>PokéIndex</strong>
         </h1>
+        {/* Subheading */}
         <p className="lead">Search for any Pokemon!</p>
       </div>
       <div className="col">
+        {/* Card */}
         <Card className="home-card">
           <Card.Img variant="top" src={CardImage} />
           <Card.Body>
@@ -42,6 +43,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

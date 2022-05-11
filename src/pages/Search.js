@@ -3,7 +3,7 @@ import PokemonCardSearch from "../components/PokemonCardSearch";
 
 import "../styles/pages/Search.css";
 
-function Search() {
+const Search = () => {
   const [data, setData] = useState(null);
   const [print, setPrint] = useState(false);
 
@@ -49,6 +49,6 @@ function Search() {
       {print ? <PokemonCardSearch pokemonProp={data} /> : null}
     </div>
   );
-}
+};
 
 export default Search;

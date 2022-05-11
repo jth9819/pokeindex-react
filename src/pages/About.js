@@ -5,7 +5,7 @@ import CharizardImage from "../assets/images/charizard-about.png";
 import BlastoiseImage from "../assets/images/blastoise-about.png";
 import VenusaurImage from "../assets/images/venusaur-about.png";
 
-function Home() {
+const About = () => {
   let navigate = useNavigate();
 
   return (
@@ -216,6 +216,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
-export default Home;
+export default About;
