@@ -16,39 +16,6 @@
   color: #4b6584;
 }
 
-.container-about-image-one {
-  margin-bottom: 50px;
-  /* border: 3px solid red; */
-}
-
-.container-about-image-two {
-  margin-top: 40px;
-  margin-bottom: 70px;
-  /* border: 3px solid red; */
-}
-
-.container-about-image-three {
-  margin-bottom: 50px;
-  /* border: 3px solid red; */
-}
-
-.container-about-image-one img {
-  display: block;
-  margin: auto;
-}
-
-.container-about-image-two img {
-  display: block;
-  margin: auto;
-  margin-bottom: 50px;
-}
-
-.container-about-image-three img {
-  display: block;
-  margin: auto;
-  margin-bottom: 10px;
-}
-
 .images {
   width: auto;
   margin: auto;
@@ -59,44 +26,63 @@
   margin: auto;
 }
 
-.images a {
-  color: #4b6584;
-}
-
 @media (min-width: 576px) {
   .images img {
     width: 22rem;
     margin: auto;
   }}
 
+.images a {
+  color: #4b6584;
+}
+
+.container-about-image-one {
+  margin-bottom: 50px;
+}
+
+.container-about-image-two {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.container-about-image-three {
+  margin-bottom: 50px;
+}
+
 .container-about-image-one img {
-  margin-top: 1rem;;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
 }
 
 .container-about-image-two img {
+  display: block;
+  margin: auto;
   margin-top: 4rem;
-  margin-bottom: 2rem;;
+  margin-bottom: 2rem;
 }
 
 .container-about-image-three img {
+  display: block;
+  margin: auto;
   margin-top: 3rem;
 }
 
-.images .container-about-image-one cite {
+.container-about-image-one cite {
   opacity: 0.7;
   display: block;
   text-align: center;
   margin: auto;
 }
 
-.images .container-about-image-two cite {
+.container-about-image-two cite {
   opacity: 0.7;
   display: block;
   text-align: center;
   margin: auto;
 }
 
-.images .container-about-image-three cite {
+.container-about-image-three cite {
   opacity: 0.7;
   display: block;
   text-align: center;

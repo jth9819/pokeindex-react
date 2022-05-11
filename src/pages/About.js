@@ -1,27 +1,26 @@
-import "../styles/pages/About.css";
 import { useNavigate } from "react-router-dom";
 
+import "../styles/pages/About.css";
 import CharizardImage from "../assets/images/charizard-about.png";
 import BlastoiseImage from "../assets/images/blastoise-about.png";
 import VenusaurImage from "../assets/images/venusaur-about.png";
-
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function Home() {
   let navigate = useNavigate();
 
   return (
-    <div className="row" id="content-wrap">
-      {/* Heading */}
-      <div className="home-header text-center">
-        <h1 className="display-3">
-          <strong>About PokéIndex</strong>
-        </h1>
-        <p className="lead">A Beta Pokédex</p>
-      </div>
-      {/* Welcome, Why, How Section */}
-      <section className="welcome-why-how">
-        <div className="container">
+    <div className="container">
+      <div className="row" id="content-wrap">
+        {/* Heading */}
+        <div className="home-header text-center">
+          <h1 className="display-3">
+            <strong>About PokéIndex</strong>
+          </h1>
+          {/* Subheading */}
+          <p className="lead">A Beta Pokédex</p>
+        </div>
+        {/* Welcome, Why, How Section */}
+        <section className="welcome-why-how">
           <div className="row">
             <div className="col-md-4">
               <h2>Welcome!</h2>
@@ -89,27 +88,25 @@ function Home() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Charizard Image */}
-      <div className="images">
-        <section className="container-about-image-one">
-          <img src={CharizardImage} alt="Charizard" />
-          <cite>
-            <a
-              href="https://bulbapedia.bulbagarden.net/wiki/Charizard_(Pok%C3%A9mon)"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Charizard
-            </a>
-            &nbsp;from Bulapedia
-          </cite>
         </section>
-      </div>
-      {/* Potential Applications Section */}
-      <section className="potential-applications">
-        <div className="container">
+        {/* Charizard Image */}
+        <div className="images">
+          <section className="container-about-image-one">
+            <img src={CharizardImage} alt="Charizard" />
+            <cite>
+              <a
+                href="https://bulbapedia.bulbagarden.net/wiki/Charizard_(Pok%C3%A9mon)"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Charizard
+              </a>
+              &nbsp;from Bulapedia
+            </cite>
+          </section>
+        </div>
+        {/* Potential Applications Section */}
+        <section className="potential-applications">
           <h2 id="potential-applications">Potential Applications</h2>
           <p>
             I would now like to discuss some potential web applications that can
@@ -142,27 +139,25 @@ function Home() {
               to how long a particular game has been played.
             </li>
           </ul>
-        </div>
-      </section>
-      {/* Blastoise Image */}
-      <div className="images">
-        <section className="container-about-image-two">
-          <img src={BlastoiseImage} alt="Blastoise" width="350px" />
-          <cite>
-            <a
-              href="https://bulbapedia.bulbagarden.net/wiki/Blastoise_(Pok%C3%A9mon)"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Blastoise
-            </a>
-            &nbsp;from Bulapedia
-          </cite>
         </section>
-      </div>
-      {/* Other Information Section */}
-      <section className="other-information">
-        <div className="container">
+        {/* Blastoise Image */}
+        <div className="images">
+          <section className="container-about-image-two">
+            <img src={BlastoiseImage} alt="Blastoise" width="350px" />
+            <cite>
+              <a
+                href="https://bulbapedia.bulbagarden.net/wiki/Blastoise_(Pok%C3%A9mon)"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Blastoise
+              </a>
+              &nbsp;from Bulapedia
+            </cite>
+          </section>
+        </div>
+        {/* Other Information Section */}
+        <section className="other-information">
           <h2 id="other-information">
             Other Information That May Interest You
           </h2>
@@ -201,23 +196,23 @@ function Home() {
               &nbsp;pokemon has left us.
             </li>
           </ul>
-        </div>
-      </section>
-      {/* Venusaur Image */}
-      <div className="images">
-        <section className="container-about-image-three">
-          <img src={VenusaurImage} alt="Bulbasaur" width="400px" />
-          <cite>
-            <a
-              href="https://bulbapedia.bulbagarden.net/wiki/Venusaur_(Pok%C3%A9mon)"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Venusaur
-            </a>
-            &nbsp;from Bulapedia
-          </cite>
         </section>
+        {/* Venusaur Image */}
+        <div className="images">
+          <section className="container-about-image-three">
+            <img src={VenusaurImage} alt="Bulbasaur" width="400px" />
+            <cite>
+              <a
+                href="https://bulbapedia.bulbagarden.net/wiki/Venusaur_(Pok%C3%A9mon)"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Venusaur
+              </a>
+              &nbsp;from Bulapedia
+            </cite>
+          </section>
+        </div>
       </div>
     </div>
   );
