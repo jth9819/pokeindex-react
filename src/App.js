@@ -1,6 +1,8 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import "./styles/App.css";
+
 import AppNavbar from "./components/AppNavbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,9 +10,7 @@ import Search from "./pages/Search";
 import Browse from "./pages/Browse";
 import Footer from "./components/Footer";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-function App() {
+const App = () => {
   return (
     <Router>
       <AppNavbar />
@@ -27,6 +27,6 @@ function App() {
       <Footer />
     </Router>
   );
-}
+};
 
 export default App;

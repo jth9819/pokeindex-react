@@ -1,22 +1,6 @@
-footer {
+.footer {
   display: block;
   margin: auto;
-}
-
-footer img {
-  margin-bottom: 6px;
-}
-
-.text-muted {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.text-muted:hover {
-  text-decoration: underline;
-}
-
-.footer {
   padding-top: 2.5rem;
   margin-bottom: 50px;
 }
@@ -34,7 +18,20 @@ footer img {
   text-align: center;
 }
 
-button {
+.footer img {
+  margin-bottom: 6px;
+}
+
+.footer button {
   border-style: none;
   background-color: white;
+}
+
+.text-muted {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.text-muted:hover {
+  text-decoration: underline;
 }

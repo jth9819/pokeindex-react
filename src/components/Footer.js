@@ -1,11 +1,10 @@
-import "../styles/components/Footer.css";
 import { useNavigate } from "react-router-dom";
 
-import MainLogo from "../assets/images/favicon.ico";
+import "../styles/components/Footer.css";
+import MainLogo from "../assets/images/navbar-footer-pokeball.png";
 
 const Footer = () => {
   let navigate = useNavigate();
-
   return (
     <footer className="container footer">
       <div className="row">

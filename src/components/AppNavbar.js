@@ -1,12 +1,11 @@
-import "../styles/components/AppNavbar.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
 import { LinkContainer } from "react-router-bootstrap";
-
-import MainLogo from "../assets/images/favicon.ico";
 import { Container } from "react-bootstrap";
+
+import "../styles/components/AppNavbar.css";
+import MainLogo from "../assets/images/navbar-footer-pokeball.png";
 
 const AppNavbar = () => {
   return (
@@ -17,6 +16,7 @@ const AppNavbar = () => {
       expand="sm"
       variant="dark"
     >
+      {/* Navbar fluid container */}
       <Container fluid>
         {/* Logo directs you to home page */}
         <LinkContainer to="/">
@@ -30,8 +30,8 @@ const AppNavbar = () => {
         </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* Title directs you to home page */}
           <Nav className="me-auto" id="nav-dropdowns">
+            {/* Pokemon DropDown */}
             <NavDropdown title="Pokemon" id="basic-nav-dropdown">
               {/* Search DropDown Item */}
               <LinkContainer to="/search">

@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { LinkContainer } from "react-router-bootstrap";
 
-import CardImage from "../assets/images/pokemon-art-4.jpeg";
+import CardImage from "../assets/images/pokemon-home.jpeg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 

@@ -5,7 +5,7 @@ import "../styles/pages/Browse.css";
 const Browse = () => {
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
-    "https://pokeapi.co/api/v2/pokemon?limit=14"
+    "https://pokeapi.co/api/v2/pokemon?limit=18"
   );
 
   const getAllPokemons = async () => {
@@ -51,7 +51,7 @@ const Browse = () => {
               id={pokemonStats.id}
               image={pokemonStats.sprites.other.dream_world.front_default}
               name={pokemonStats.name}
-              type={pokemonStats.types[0].type.name}
+              types={pokemonStats.types}
             />
           ))}
         </div>
