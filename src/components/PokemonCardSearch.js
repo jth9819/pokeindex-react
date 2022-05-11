@@ -14,6 +14,7 @@ const PokemonCardSearch = (props) => {
     types: [],
   };
 
+  // Retrieve pokemon info and store
   useEffect(() => {
     axios.get(url).then((response) => {
       setPokemon(response.data);
@@ -29,7 +30,7 @@ const PokemonCardSearch = (props) => {
       types: pokemon.types,
     };
 
-    // Check number of types and store
+    // Check number of types and store + fix casing
     if (pokemon.types.length === 1) {
       pokemonTypes =
         pokemonObject.types[0].type.name.charAt(0).toUpperCase() +

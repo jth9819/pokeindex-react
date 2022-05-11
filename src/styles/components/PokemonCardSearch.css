@@ -1,12 +1,10 @@
-
-
 .search-card {
     width: 15rem;
     margin: auto;
     margin-top: 2rem;
   }
 
-  @media (min-width: 576px) {
+@media (min-width: 576px) {
     .search-card {
         width: 30.5rem;
         margin: auto;

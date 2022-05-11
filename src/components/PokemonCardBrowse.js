@@ -4,12 +4,18 @@ const PokemonCardBrowse = ({ id, image, name, types }) => {
   const style = types[0].type.name + " card-container";
   let pokemonTypes = null;
 
-  // Check number of types and store
+  // Check number of types and store + fix casing
   if (types.length === 1) {
-    pokemonTypes = types[0].type.name;
+    pokemonTypes =
+      types[0].type.name.charAt(0).toUpperCase() + types[0].type.name.slice(1);
   }
   if (types.length === 2) {
-    pokemonTypes = types[0].type.name + " / " + types[1].type.name;
+    pokemonTypes =
+      types[0].type.name.charAt(0).toUpperCase() +
+      types[0].type.name.slice(1) +
+      " / " +
+      types[1].type.name.charAt(0).toUpperCase() +
+      types[1].type.name.slice(1);
   }
 
   return (
@@ -26,7 +32,7 @@ const PokemonCardBrowse = ({ id, image, name, types }) => {
         {/* Displays pokemon details */}
         <small>
           <strong>Type: </strong>
-          {pokemonTypes.charAt(0).toUpperCase() + pokemonTypes.slice(1)}
+          {pokemonTypes}
         </small>
       </div>
     </div>
