@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Card from "react-bootstrap/Card";
+import axios from "axios";
 
 import "../styles/components/PokemonCardSearch.css";
 
-function PokemonCardSearch(props) {
+const PokemonCardSearch = (props) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${props.pokemonProp}`;
   const [pokemon, setPokemon] = useState(null);
 
@@ -29,29 +29,41 @@ function PokemonCardSearch(props) {
       types: pokemon.types,
     };
 
-    // Check and store types
+    // Check number of types and store
     if (pokemon.types.length === 1) {
-      pokemonTypes = pokemonObject.types[0].type.name;
+      pokemonTypes =
+        pokemonObject.types[0].type.name.charAt(0).toUpperCase() +
+        pokemonObject.types[0].type.name.slice(1);
     }
     if (pokemon.types.length === 2) {
       pokemonTypes =
-        pokemonObject.types[0].type.name +
+        pokemonObject.types[0].type.name.charAt(0).toUpperCase() +
+        pokemonObject.types[0].type.name.slice(1) +
         " / " +
-        pokemonObject.types[1].type.name;
+        pokemonObject.types[1].type.name.charAt(0).toUpperCase() +
+        pokemonObject.types[1].type.name.slice(1);
     }
 
     let returnObject = (
       <Card className="search-card">
-        <h2 id="pokemon-name">{pokemonObject.name}</h2>
-        <img id="pokemon-image" src={pokemonObject.image} alt="Pokemon" />
-        <p id="pokemon-types">{pokemonTypes}</p>
+        {/* Displays pokemon name */}
+        <h2 id="pokemon-name">
+          {pokemonObject.name.charAt(0).toUpperCase() +
+            pokemonObject.name.slice(1)}
+        </h2>{" "}
+        {/* Displays pokemon image */}
+        <img id="pokemon-image" src={pokemonObject.image} alt="Pokemon" />{" "}
+        {/* Displays pokemon types */}
+        <p id="pokemon-types">
+          <strong>Type: </strong>
+          {pokemonTypes}
+        </p>{" "}
       </Card>
     );
-
     return <div>{returnObject}</div>;
   } else {
     return <div></div>;
   }
-}
+};
 
 export default PokemonCardSearch;

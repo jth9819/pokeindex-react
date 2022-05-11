@@ -19,6 +19,8 @@
   }
   
   .card-container img {
+    margin-top: 0.7rem;
+    margin-bottom: 0.2rem;
     width: 120px;
     height: 120px;
   }
@@ -33,7 +35,8 @@
     width: 100%;
   }
   
-  .detail-wrapper button {
+  /* For future addition */
+  /* .detail-wrapper button {
     color: rgb(22, 22, 22);
     padding: .5rem;
     margin-top: 1rem;
@@ -41,4 +44,4 @@
     border-radius: 0.2rem;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.185);
-  }
+  } */
