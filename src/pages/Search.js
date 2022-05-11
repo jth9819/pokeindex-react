@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import PokemonCardSearch from "../components/PokemonCardSearch";
 
 import "../styles/pages/Search.css";
+import PokemonCardSearch from "../components/PokemonCardSearch";
 
 const Search = () => {
   const [data, setData] = useState(null);
@@ -14,8 +14,9 @@ const Search = () => {
 
   return (
     <div className="row" id="content-wrap">
-      {/* Heading */}
+      {/* Header */}
       <div className="home-header text-center">
+        {/* Heading */}
         <h1 className="display-3">
           <strong>PokéIndex Search</strong>
         </h1>
@@ -46,6 +47,7 @@ const Search = () => {
           Find
         </button>
       </div>
+      {/* If print is true, display card */}
       {print ? <PokemonCardSearch pokemonProp={data} /> : null}
     </div>
   );
