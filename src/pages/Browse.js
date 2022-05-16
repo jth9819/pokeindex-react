@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactPlaceholder from "react-placeholder";
 import PokemonCardBrowse from "../components/PokemonCardBrowse";
 
 import "../styles/pages/Browse.css";
