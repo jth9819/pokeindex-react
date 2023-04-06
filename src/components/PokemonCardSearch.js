@@ -14,11 +14,13 @@ const PokemonCardSearch = (props) => {
     types: [],
   };
 
-  // Retrieve pokemon info and store
+  const getData = async () => {
+    const { data } = await axios.get(url);
+    setPokemon(data);
+  };
+
   useEffect(() => {
-    axios.get(url).then((response) => {
-      setPokemon(response.data);
-    });
+    getData()
   }, [url]);
 
   if (pokemon) {

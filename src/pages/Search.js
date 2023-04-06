@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-
-import "../styles/pages/Search.css";
 import PokemonCardSearch from "../components/PokemonCardSearch";
+import "../styles/pages/Search.css";
 
 const Search = () => {
-  const [data, setData] = useState(null);
+  const [value, setValue] = useState("");
   const [print, setPrint] = useState(false);
+  const [result, setResult] = useState("");
 
-  function getData(val) {
-    setData(val.target.value);
-    setPrint(false);
+  function handleChange(event) {
+    console.log("HandleChange hit.");
+    setValue(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    console.log("HandleSubmit hit.");
+    setResult(value)
+    setPrint(true)
   }
 
   return (
@@ -31,7 +37,7 @@ const Search = () => {
         {/* Input field */}
         <input
           type="text"
-          onChange={getData}
+          onChange={handleChange}
           className="form-control rounded"
           id="search-query"
           placeholder="Search for a Pokemon!"
@@ -40,7 +46,7 @@ const Search = () => {
         &nbsp;&nbsp;
         {/* Find button */}
         <button
-          onClick={() => setPrint(true)}
+          onClick={handleSubmit}
           className="input-group-text border-0"
           id="search-btn"
         >
@@ -48,7 +54,7 @@ const Search = () => {
         </button>
       </div>
       {/* If print is true, display card */}
-      {print ? <PokemonCardSearch pokemonProp={data} /> : null}
+      {print ? <PokemonCardSearch pokemonProp={result} /> : null}
     </div>
   );
 };
