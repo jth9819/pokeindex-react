@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LoadingIcons from "react-loading-icons";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
 
@@ -7,6 +8,8 @@ import "../styles/components/PokemonCardSearch.css";
 const PokemonCardSearch = (props) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${props.pokemonProp}`;
   const [pokemon, setPokemon] = useState(null);
+  const [errorHit, setErrorHit] = useState(false);
+  const [spinningIcon, setSpinningIcon] = useState("");
 
   let pokemonObject = {
     name: null,
@@ -15,15 +18,33 @@ const PokemonCardSearch = (props) => {
   };
 
   const getData = async () => {
-    const { data } = await axios.get(url);
-    setPokemon(data);
+    setSpinningIcon(<LoadingIcons.Oval stroke="#1a1a1a" />);
+    await axios
+      .get(url)
+      .then((response) => {
+        setSpinningIcon("");
+        setPokemon(response.data);
+      })
+      .catch((e) => {
+        setErrorHit(true);
+      });
   };
 
   useEffect(() => {
+    setPokemon(null)
+    setErrorHit(false);
     getData()
-  }, [url]);
+  }, [props.pokemonProp]);
 
-  if (pokemon) {
+  if(errorHit === true) {
+    return "Cannot find. Try again!"
+  } 
+  
+  else if (pokemon === null) {
+    return spinningIcon;
+  } 
+  
+  else if (pokemon) {
     let pokemonTypes = null;
 
     pokemonObject = {
