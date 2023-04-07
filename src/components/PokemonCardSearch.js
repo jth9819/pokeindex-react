@@ -8,7 +8,6 @@ import SiteLoadingIcon from "./SiteLoadingIcon";
 
 const PokemonCardSearch = (props) => {
   const lowercasePokemonProp = props.pokemonProp.toLowerCase()
-
   const url = `https://pokeapi.co/api/v2/pokemon/${lowercasePokemonProp}`;
   const [pokemon, setPokemon] = useState(null);
   const [errorHit, setErrorHit] = useState(false);
@@ -52,6 +51,7 @@ const PokemonCardSearch = (props) => {
     pokemonObject = {
       name: pokemon.name,
       image: pokemon.sprites.other.dream_world.front_default,
+      id: pokemon.id,
       types: pokemon.types,
     };
 
@@ -72,14 +72,12 @@ const PokemonCardSearch = (props) => {
 
     let returnObject = (
       <Card className="search-card">
-        {/* Displays pokemon name */}
         <h2 id="pokemon-name">
           {pokemonObject.name.charAt(0).toUpperCase() +
             pokemonObject.name.slice(1)}
         </h2>{" "}
-        {/* Displays pokemon image */}
         <img id="pokemon-image" src={pokemonObject.image} alt="Pokemon" />{" "}
-        {/* Displays pokemon types */}
+        <p id="pokemon-id">#{pokemonObject.id}</p>
         <p id="pokemon-types">
           <strong>Type: </strong>
           {pokemonTypes}
