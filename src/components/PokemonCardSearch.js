@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import LoadingIcons from "react-loading-icons";
-import Card from "react-bootstrap/Card";
 import axios from "axios";
 
 import "../styles/components/PokemonCardSearch.css";
 import SiteLoadingIcon from "./SiteLoadingIcon";
+import PokemonCard from "./PokemonCard";
 
 const PokemonCardSearch = (props) => {
   const lowercasePokemonProp = props.pokemonProp.toLowerCase()
@@ -70,21 +70,10 @@ const PokemonCardSearch = (props) => {
         pokemonObject.types[1].type.name.slice(1);
     }
 
-    let returnObject = (
-      <Card className="search-card">
-        <h2 id="pokemon-name">
-          {pokemonObject.name.charAt(0).toUpperCase() +
-            pokemonObject.name.slice(1)}
-        </h2>{" "}
-        <img id="pokemon-image" src={pokemonObject.image} alt="Pokemon" />{" "}
-        <p id="pokemon-id">#{pokemonObject.id}</p>
-        <p id="pokemon-types">
-          <strong>Type: </strong>
-          {pokemonTypes}
-        </p>{" "}
-      </Card>
+    let pokemonCardToDisplay = (
+      <PokemonCard pokemonObject = {pokemonObject} pokemonTypes = {pokemonTypes} />
     );
-    return <div>{returnObject}</div>;
+    return <div>{pokemonCardToDisplay}</div>;
   } else {
     return <div></div>;
   }
