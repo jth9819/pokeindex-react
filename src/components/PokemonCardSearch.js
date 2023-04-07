@@ -4,9 +4,12 @@ import Card from "react-bootstrap/Card";
 import axios from "axios";
 
 import "../styles/components/PokemonCardSearch.css";
+import SiteLoadingIcon from "./SiteLoadingIcon";
 
 const PokemonCardSearch = (props) => {
-  const url = `https://pokeapi.co/api/v2/pokemon/${props.pokemonProp}`;
+  const lowercasePokemonProp = props.pokemonProp.toLowerCase()
+
+  const url = `https://pokeapi.co/api/v2/pokemon/${lowercasePokemonProp}`;
   const [pokemon, setPokemon] = useState(null);
   const [errorHit, setErrorHit] = useState(false);
   const [spinningIcon, setSpinningIcon] = useState("");
@@ -18,7 +21,7 @@ const PokemonCardSearch = (props) => {
   };
 
   const getData = async () => {
-    setSpinningIcon(<LoadingIcons.Oval stroke="#1a1a1a" />);
+    setSpinningIcon(< SiteLoadingIcon />);
     await axios
       .get(url)
       .then((response) => {
@@ -37,16 +40,15 @@ const PokemonCardSearch = (props) => {
   }, [props.pokemonProp]);
 
   if(errorHit === true) {
-    return "Cannot find. Try again!"
-  } 
-  
-  else if (pokemon === null) {
+    return (
+      <div style={{textAlign: "center", marginTop: "15px"}}>Cannot find. Try again!</div>
+    )
+  } else if (pokemon === null) {
     return spinningIcon;
   } 
   
   else if (pokemon) {
     let pokemonTypes = null;
-
     pokemonObject = {
       name: pokemon.name,
       image: pokemon.sprites.other.dream_world.front_default,

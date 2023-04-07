@@ -25,17 +25,16 @@ const Search = () => {
         </h1>
         <small>Enter a Pokemon's Name or National PokeDex Number!</small>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <input
             type="text"
-            value={value}
             onChange={handleChange}
             className="form-control rounded"
             id="search-query"
             placeholder="Search for a Pokemon!"
             aria-label="Search"
         />
-        <input type="submit" value="Find" />
+        <input type="submit" value="Find" className="find-button"/>
       </form>
 
       {print ? <PokemonCardSearch pokemonProp={result} /> : null}
