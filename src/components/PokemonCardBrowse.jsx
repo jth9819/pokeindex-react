@@ -20,16 +20,12 @@ const PokemonCardBrowse = ({ id, image, name, types }) => {
 
   return (
     <div className={style}>
-      <div className="number">
-        {/* Displays pokemon number */}
+      <div className="pokedex-number">
         <small>#0{id}</small>
       </div>
-      {/* Displays pokemon image */}
       <img src={image} alt={name} />
       <div className="detail-wrapper">
-        {/* Displays pokemon name */}
         <h3>{name.charAt(0).toUpperCase() + name.slice(1)}</h3>
-        {/* Displays pokemon details */}
         <small>
           <strong>Type: </strong>
           {pokemonTypes}
