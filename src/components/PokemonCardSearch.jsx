@@ -32,28 +32,16 @@ const PokemonCardSearch = (props) => {
   } else if (pokemon === null) {
     return spinningIcon;
   } else if (pokemon) {
-    let pokemonTypes = null;
-    let pokemonObject = {
-      name: pokemon.name,
-      image: pokemon.sprites.other.dream_world.front_default,
-      id: pokemon.id,
-      types: pokemon.types,
-    };
-
-    if (pokemon.types.length === 1) {
-      pokemonTypes =
-        pokemonObject.types[0].type.name.charAt(0).toUpperCase() +
-        pokemonObject.types[0].type.name.slice(1);
-    }
-    if (pokemon.types.length === 2) {
-      pokemonTypes =
-        pokemonObject.types[0].type.name.charAt(0).toUpperCase() +
-        pokemonObject.types[0].type.name.slice(1) +
-        " / " +
-        pokemonObject.types[1].type.name.charAt(0).toUpperCase() +
-        pokemonObject.types[1].type.name.slice(1);
-    }
-    return <div className="search-card-container"><PokemonCard pokemonObject={pokemonObject} pokemonTypes={pokemonTypes} /></div>;
+    return (
+      <div className="search-card-container">
+        <PokemonCard
+          id={pokemon.id}
+          image={pokemon.sprites.other.dream_world.front_default}
+          name={pokemon.name}
+          types={pokemon.types}
+        />
+      </div>
+    )
   } else {
     return <div></div>;
   }

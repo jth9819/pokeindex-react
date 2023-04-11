@@ -11,13 +11,10 @@ const Browse = () => {
 
   // Retrieve pokemon info and store
   const getAllPokemon = async () => {
-    // const res = browseGetPokemon()
     const res = await fetch(loadMore);
     const data = await res.json();
-    console.log(data)
 
     setLoadMore(data.next);
-    // console.log(loadMore)
 
     const createPokemonObject = (results) => {
       results.forEach(async (pokemon) => {
