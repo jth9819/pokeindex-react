@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PokemonCardBrowse from "../components/PokemonCardBrowse";
-
 import "../styles/pages/Browse.css";
+import { browseGetPokemon } from "../api/PokemonApi";
 
 const Browse = () => {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -11,10 +11,13 @@ const Browse = () => {
 
   // Retrieve pokemon info and store
   const getAllPokemon = async () => {
+    // const res = browseGetPokemon()
     const res = await fetch(loadMore);
     const data = await res.json();
+    console.log(data)
 
     setLoadMore(data.next);
+    // console.log(loadMore)
 
     const createPokemonObject = (results) => {
       results.forEach(async (pokemon) => {
@@ -39,7 +42,7 @@ const Browse = () => {
       <div className="home-header text-center">
         {/* Heading */}
         <h1 className="display-3">
-          <strong>PokéIndex Browse</strong>
+          <strong>Browse</strong>
         </h1>
         {/* Subheading */}
         <small>Browse for all Pokémon in the PokéAPI's database!</small>

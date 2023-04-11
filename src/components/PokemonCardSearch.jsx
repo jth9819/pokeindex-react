@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import LoadingIcons from "react-loading-icons";
-import axios from "axios";
-import { getPokemon } from "../api/PokemonApi"
-
-import "../styles/components/PokemonCardSearch.css";
+import { searchGetPokemon } from "../api/PokemonApi"
 import SiteLoadingIcon from "./SiteLoadingIcon";
 import PokemonCard from "./PokemonCard";
+import "../styles/components/PokemonCardSearch.css";
 
 const PokemonCardSearch = (props) => {
   const [pokemon, setPokemon] = useState(null);
@@ -14,7 +11,7 @@ const PokemonCardSearch = (props) => {
 
   const getData = async () => {
     setSpinningIcon(< SiteLoadingIcon />);
-    getPokemon(props.pokemonProp.toLowerCase())
+    searchGetPokemon("/" + props.pokemonProp.toLowerCase())
       .then((response) => {
         setSpinningIcon(null);
         setPokemon(response.data);

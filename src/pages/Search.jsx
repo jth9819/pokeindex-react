@@ -21,7 +21,7 @@ const Search = () => {
     <div className="row" id="content-wrap">
       <div className="home-header text-center">
         <h1 className="display-3">
-          <strong>PokéIndex Search</strong>
+          <strong>Search</strong>
         </h1>
         <small>Enter a Pokemon's Name or National PokeDex Number!</small>
       </div>
