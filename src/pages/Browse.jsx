@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import PokemonCardBrowse from "../components/PokemonCardBrowse";
+import PokemonCard from "../components/PokemonCard";
 import "../styles/pages/Browse.css";
 import { browseGetPokemon } from "../api/PokemonApi";
+
 
 const Browse = () => {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -48,8 +50,8 @@ const Browse = () => {
         {/* List to display pokemon */}
         <div className="list-container">
           {allPokemon.map((pokemonStats, index) => (
-            <PokemonCardBrowse
-              key={index}
+            <PokemonCard
+              // key={index}
               id={pokemonStats.id}
               image={pokemonStats.sprites.other.dream_world.front_default}
               name={pokemonStats.name}
